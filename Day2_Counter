@@ -1,0 +1,5 @@
+var createCounter = (n) => {
+    return () => n++;
+}
+
+//let count = counter();

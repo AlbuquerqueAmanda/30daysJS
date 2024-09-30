@@ -1,0 +1,12 @@
+var once = function(fn) {
+    let alreadyCalled = false;
+    let result;
+    return function(...args){
+        if (!alreadyCalled) {
+            result = fn(...args);
+            alreadyCalled = true;
+            return result;
+        }
+        return undefined;
+    };
+};
